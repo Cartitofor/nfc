@@ -7,8 +7,12 @@
   </style>
 </head>
 <body>
-  <audio autoplay loop playsinline muted="false">
-    <source src = "NFCearRape.mp3" type="audio/mpeg">
-  </audio>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var audio = new Audio("NFCearRape.mp3");
+    audio.loop = true;
+    audio.play();
+  });
+</script>
 </body>
 </html>
