@@ -3,21 +3,32 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { background: black; margin: 0; height: 100vh; width: 100vw; }
+    body {
+      background: black;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    p {
+      color: white;
+      font-size: 24px;
+      font-family: sans-serif;
+    }
   </style>
 </head>
 <body>
-<script>
-  var audio = new Audio("NFCearRape.mp3");
-  audio.loop = true;
-  audio.play().catch(function() {
-    document.addEventListener("touchstart", function() {
-      audio.play();
-    }, { once: true });
+  <p>Tap</p>
+  <script>
+    var audio = new Audio("NFCearRape.mp3");
+    audio.loop = true;
     document.addEventListener("click", function() {
       audio.play();
     }, { once: true });
-  });
-</script>
+    document.addEventListener("touchstart", function() {
+      audio.play();
+    }, { once: true });
+  </script>
 </body>
 </html>
